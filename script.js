@@ -12,27 +12,7 @@ function showPosition(position) {
     console.log(lati, long);
 
 }
-// --------------------------------default--------------------------------------
-defaultweather();
-function defaultweather() {
-    let usersearch = document.getElementById("txtsearch").value;
-    let temperature = document.getElementById("txttemperature");
-    let searchlocation = document.getElementById("searchlocation");
-    let condition = document.getElementById("txtcondition");
-    let conditionpng = document.getElementById("weatherpng");
-    let txthumidity = document.getElementById("txthumidity");
-    let txtwind_speed = document.getElementById("txtwind_speed");
 
-    fetch(`https://api.weatherapi.com/v1/current.json?key=deb6473242c04b95b29150633243009&q=yakkalamulla`)
-        .then(res => res.json())
-        .then(data => {
-            temperature.innerText = data.current.temp_c + "°C";
-            searchlocation.innerText = data.location.name + " Current Weather";
-            condition.innerText = data.current.condition.text;
-            conditionpng.src = `${data.current.condition.icon}`;
-            txthumidity.innerText = data.current.humidity + "%";
-            txtwind_speed.innerText = data.current.wind_kph + "kph";
-        });
 
     // --------------------------------------5day_forecast_weather---------------------------------------------
     let htday1 = document.getElementById("day1");
@@ -179,10 +159,12 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htForeday1.innerText = year + "-" + month + "-" + day1;
+                    htForeday1.innerText = `${year}-${month}-${day1}`;
                     htForeday1png.src = `${element.day.condition.icon}`;
                     htForeday1condition.innerHTML = element.day.condition.text;
+
                 });
+
 
             });
         // ---------------------------------------------------day2--------------------------------------------
@@ -190,7 +172,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htForeday2.innerText = year + "-" + month + "-" + day2;
+                    htForeday2.innerText = `${year}-${month}-${day2}`;
                     htForeday2png.src = `${element.day.condition.icon}`;
                     htForeday2condition.innerHTML = element.day.condition.text;
                 });
@@ -201,7 +183,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htForeday3.innerText = year + "-" + month + "-" + day3;
+                    htForeday3.innerText = `${year}-${month}-${day3}`;
                     htForeday3png.src = `${element.day.condition.icon}`;
                     htForeday3condition.innerHTML = element.day.condition.text;
                 });
@@ -213,9 +195,9 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htForeday4.innerText = year + "-" + month + "-" + day4;
+                    htForeday4.innerText = `${year}-${month}-${day4}`;
                     htForeday4png.src = `${element.day.condition.icon}`;
-                    htForeday1condition.innerHTML = element.day.condition.text;
+                    htForeday4condition.innerHTML = element.day.condition.text;
                 });
 
             });
@@ -225,7 +207,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htForeday5.innerText = year + "-" + month + "-" + day5;
+                    htForeday5.innerText = `${year}-${month}-${day5}`;
                     htForeday5png.src = `${element.day.condition.icon}`;
                     htForeday5condition.innerHTML = element.day.condition.text;
                 });
@@ -294,7 +276,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htday1.innerText = year + "-" + month + "-" + day1;
+                    htday1.innerText = `${year}-${month}-${day1}`;
                     htday1png.src = `${element.day.condition.icon}`;
                     htday1condition.innerHTML = element.day.condition.text;
 
@@ -308,7 +290,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htday2.innerText = year + "-" + month + "-" + day2;
+                    htday2.innerText = `${year}-${month}-${day2}`;
                     htday2png.src = `${element.day.condition.icon}`;
                     htday2condition.innerText = element.day.condition.text;
 
@@ -334,7 +316,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htday4.innerText = year + "-" + month + "-" + day4;
+                    htday4.innerText = `${year}-${month}-${day4}`;
                     htday4png.src = `${element.day.condition.icon}`;
                     htday4condition.innerHTML = element.day.condition.text;
 
@@ -346,7 +328,7 @@ function defaultweather() {
             .then(res => res.json())
             .then(data => {
                 data.forecast.forecastday.forEach(element => {
-                    htday5.innerText = year + "-" + month + "-" + day5;
+                    htday5.innerText = `${year}-${month}-${day5}`;
                     htday5png.src = `${element.day.condition.icon}`;
                     htday5condition.innerHTML = element.day.condition.text;
 
@@ -355,7 +337,7 @@ function defaultweather() {
 
             });
     }
-    // -----------------------------------------Forecast Weather-------------------------------------
+//     // -----------------------------------------Forecast Weather-------------------------------------
     function ForecastSearch() {
         let usersearch = document.getElementById("txtsearch").value;
         let htForeday1 = document.getElementById("htday1");
@@ -459,4 +441,3 @@ function defaultweather() {
         var element = document.body;
         element.classList.toggle("dark-mode");
     }
-}
