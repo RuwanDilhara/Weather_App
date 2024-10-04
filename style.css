@@ -1,0 +1,212 @@
+* {
+    margin: auto;
+}
+
+body {
+    /* background-image: url(bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-color: rgb(255, 255, 255);
+}
+
+#search_box {
+    padding: 50px;
+    text-align: center;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#search_box input {
+    padding: 15px;
+    border-radius: 10px;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+#txtsearch {
+    width: 40%;
+    height: 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+
+#btnsearch:hover {
+    cursor: pointer;
+    zoom: 120%;
+
+}
+
+.container {
+    text-align: center;
+    background-color: black;
+    width: 100%;
+}
+
+.container h1 {
+    color: rgb(255, 255, 255);
+    padding: 15px;
+}
+
+.location_header {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.858);
+}
+
+.container img {
+    width: 100px;
+}
+
+.line1box1 {
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    margin: 1%;
+    min-width: 190px;
+    background-color: ;
+}
+
+.line1box1 h2 {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+.line1box2 {
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    margin: 1%;
+    min-width: 190px;
+}
+
+.line1box2 h2 {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+.line1box3 {
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    margin: 1%;
+    min-width: 190px;
+}
+
+.line1box3 h2 {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+.line1box4 {
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    margin: 1%;
+    min-width: 190px;
+}
+
+.line1box4 h2 {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+/* ------------------------------------searchbydate------------------------------------------- */
+.searchbydate {
+    margin-top: 1%;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.searchbydate input,
+h3 {
+    margin: 1%;
+}
+
+.searchbydate h1 {
+    margin: 10px;
+}
+
+.searchbydate h1 {
+    color: white;
+}
+
+.searchbydate img {
+    width: 100px;
+}
+
+.line2box1 {
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    margin: 1%;
+    min-width: 150px;
+}
+
+.line2box1 h2 {
+    color: rgb(255, 255, 255);
+}
+
+h1,
+h2 {
+    color: #ff0000;
+}
+
+h1,
+h2,
+h3,
+hr {
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+
+    .container {
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    h1,
+    h2,
+    h3,
+    hr {
+        color: rgb(0, 0, 0);
+
+    }
+
+    .searchbydate {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .line1box1,
+    .line1box2,
+    .line1box3,
+    .line1box4,
+    .line1box5 {
+        border-color: rgb(0, 0, 0);
+    }
+
+    .line2box1,
+    .line2box2,
+    .line2box3,
+    .line2box4,
+    .line2box5 {
+        border-color: rgb(0, 0, 0);
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div id="search_box">
+        <input id="txtsearch" type="text" placeholder="enter location">
+        <input id="btnsearch" type="button" value="Search" onclick="Search()">
+        <button style="justify-content: end;" onclick="myFunction()"><img src="dark&light.png" style="width: 30px;" alt=""></button>
+    </div>
+    <div class="container">
+        <h1 id="searchlocation">Current Weather</h1>
+        <hr>
+        <div class="line1box1">
+            <h2 id="temperature_header" class="line1box1header">Temperature</h2>
+            <hr style="margin-bottom: 15px;">
+            <img class="weatherpng" src="temperature.png" alt="">
+            <h2 id="txttemperature">empty</h2>
+        </div>
+        <div class="line1box2">
+            <h2 id="humidity_header" class="line1box2header">Humidity</h2>
+            <hr style="margin-bottom: 15px;">
+            <img class="weatherpng" src="humidity.png" alt="">
+            <h2 id="txthumidity">empty</h2>
+        </div>
+        <div class="line1box3">
+            <h2 id="wind_speed_header" class="line1box3header">Wind Speed</h2>
+            <hr style="margin-bottom: 15px;">
+            <img class="weatherpng" src="windy.png" alt="">
+            <h2 id="txtwind_speed">empty</h2>
+        </div>
+        <div class="line1box4">
+            <h2 id="description_header" class="line1box4header">Condition</h2>
+            <hr style="margin-bottom: 15px;">
+            <img id="weatherpng" class="weatherpng" src="weather.png" alt="">
+            <h2 id="txtcondition">empty</h2>
+        </div>
+    </div>
+    
+    <!--------------------------------------searchbydate-------------------------------------------  -->
+    <div class="searchbydate">
+        <h1>Forecast Weather</h1>
+        <hr style="margin-bottom: 15px;">
+        <input id="inputdate_to"  type="date">
+        <h3 style="display: inline-block;">To</h3>
+        <input id="inputdate_end" type="date" name="" id="">
+        <h3 style="display: inline-block;">End</h3>
+        <input style="padding: 10px;" id="btnsearch_by_date" type="button" value="Search" onclick="ForecastSearch()">
+
+        <div class="day5box">
+            <div class="line2box1">
+                <h2 id="htday1" class="line1box2header">2024-10-01</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="htday1png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="htday1condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="htday2" class="line1box2header">2024-10-02</h2>
+                
+                <hr style="margin-bottom: 15px;">
+                <img id="htday2png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="htday2condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="htday3" class="line1box2header">2024-10-03</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="htday3png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="htday3condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="htday4" class="line1box2header">2024-10-04</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="htday4png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="htday4condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="htday5" class="line1box2header">2024-10-05</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="htday5png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="htday5condition">cloudy</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------------------5day_forecast_weather-------------------------------------------  -->
+    <div class="searchbydate">
+        
+        <h1 style="padding: 10px;"> 5 Day Forecast Weather</h1>
+        <hr style="margin-bottom: 15px;">
+        <div class="day5box">
+            <div class="line2box1">
+                <h2 id="day1" class="line1box2header" >2024-10-01</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="day1png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="day1condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="day2" class="line1box2header">2024-10-02</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="day2png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="day2condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="day3" class="line1box2header">2024-10-03</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="day3png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="day3condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="day4" class="line1box2header">2024-10-04</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="day4png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="day4condition">cloudy</h2>
+            </div>
+            <div class="line2box1">
+                <h2 id="day5" class="line1box2header">2024-10-05</h2>
+                <hr style="margin-bottom: 15px;">
+                <img id="day5png" class="weatherpng" src="weather.png" alt="">
+                <h2 id="day5condition">cloudy</h2>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
